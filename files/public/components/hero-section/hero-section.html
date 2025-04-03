@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="../../css/hero-section.css">
+
+<header class="header">
+  <div class="_container">
+    <div class="header-container">
+      <a href="#"
+        ><img
+          class="logo"
+          src="/assets/images/hero-section/Logo.svg"
+          alt="logo"
+      /></a>
+      <nav class="menu" id="nav-menu">
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#" id="scroll-to-contacts">Оставить заявку</a></li>
+          <li><a href="#venues">Локации</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+        </ul>
+      </nav>
+      <div class="content-icons">
+        <div class="language-container">
+          <div id="language-switcher">
+            <button id="language-button" onclick="toggleLanguage()">EN</button>
+          </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <!-- Иконка меню (по умолчанию видна) -->
+          <img
+            src="/assets/icons/hero-section/menu.svg"
+            alt="menu"
+            class="menu-icon menu-icon--menu"
+          />
+          <!-- Иконка крестика (скрыта по умолчанию) -->
+          <img
+            src="/assets/icons/close_mob.svg"
+            alt="close"
+            class="menu-icon menu-icon--close"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="menu-mobile">
+  <ul>
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#" id="scroll-to-contacts-mob">Оставить заявку</a></li>
+    <li><a href="#venues">Локации</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
+  </ul>
+</nav>
+
+<div class="hero-section _container">
+  <div class="photo-container">
+    <img src="/assets/images/hero-section/hero-main.png" alt="main" />
+  </div>
+  <div class="content-container">
+    <div class="img-container">
+      <div class="img-container-flower">
+        <picture>
+          <!-- Изображение для экрана 1440px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-flowers.png"
+            media="(min-width: 1440px)"
+          />
+
+          <!-- Изображение для экрана 1024px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-flowers.png"
+            media="(max-width: 1439px) and (min-width: 1025px)"
+          />
+
+          <img
+            src="/assets/images/hero-section/hero-flowers1024.png"
+            alt="flowers"
+          />
+        </picture>
+      </div>
+      <div class="img-container-betrothal">
+        <picture>
+          <!-- Изображение для экрана 1440px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-betrothal.png"
+            media="(min-width: 1440px)"
+          />
+
+          <!-- Изображение для экрана 1024px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-betrothal.png"
+            media="(max-width: 1439px) and (min-width: 1025px)"
+          />
+
+          <img
+            src="/assets/images/hero-section/hero-betrothal1024.png"
+            alt="flowers"
+          />
+        </picture>
+      </div>
+    </div>
+    <div class="blok-header">
+      <h1>Регистрация брака в Грузии для иностранцев</h1>
+      <p>Оформите любовь в один день с международным признанием!</p>
+      <a href="#contacts"
+        ><button class="consultation-button">Заказать консультацию</button></a
+      >
+    </div>
+  </div>
+</div>

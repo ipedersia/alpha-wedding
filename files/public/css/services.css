@@ -1,0 +1,506 @@
+/* Услуги */
+
+.services-container {
+  padding: 96px 48px 64px 48px;
+}
+
+.services-content {
+  padding: 0 clamp(0px, 6vw, 114px);
+}
+
+.services-subtitle {
+  color: var(--gold150);
+  font-size: 40px;
+  width: 488px;
+  height: 100px;
+  font-family: "Cormorant Infant";
+}
+
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 32px;
+  gap: 24px;
+}
+
+.services-text {
+  max-width: 514px;
+  flex: 1;
+  padding: 0 16px;
+}
+
+.services-text-pl0 {
+  padding-left: 0;
+}
+
+.services-text p {
+  color: var(--gold150);
+  font-size: 20px;
+  padding-bottom: 24px;
+  font-family: "Montserrat";
+}
+
+.services-images {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+
+.services-images img {
+  position: absolute;
+}
+
+.services-images img:nth-child(1) {
+  max-width: 363px;
+  min-height: 442px;
+  object-fit: cover;
+  top: 0;
+  right: 0;
+}
+
+.price-label {
+  position: absolute;
+  right: 10px;
+  top: 455px;
+  font-size: 32px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+.price-label-en {
+  position: absolute;
+  right: 10px;
+  top: 455px;
+  font-size: 24px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+.services-images img:nth-child(2) {
+  position: absolute;
+  max-width: 200px;
+  max-height: 260px;
+  top: 100px;
+  left: 50px;
+  z-index: 1;
+}
+
+.services-images img:nth-child(3) {
+  min-width: 280px;
+  max-height: 220px;
+  bottom: 0;
+  left: 0;
+}
+
+.price-label-mob {
+  display: none;
+}
+
+/* Второй блок услуг*/
+
+.services-two-images {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+
+.services-two-images img {
+  position: absolute;
+}
+
+.services-two-images img:nth-child(1) {
+  max-width: 320px;
+  max-height: 240px;
+  top: 0;
+  right: 0;
+}
+
+.services-two-images img:nth-child(2) {
+  position: absolute;
+  max-width: 360px;
+  min-height: 400px;
+  object-fit: cover;
+  top: 100px;
+  z-index: 1;
+}
+
+.services-two-images img:nth-child(3) {
+  max-width: 140px;
+  max-height: 220px;
+  bottom: 0;
+  left: 290px;
+  z-index: 2;
+}
+
+.price-two-label {
+  position: absolute;
+  right: 8px;
+  top: 255px;
+  font-size: 32px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+.price-two-label-en {
+  position: absolute;
+  right: 8px;
+  top: 255px;
+  font-size: 24px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+/* Третий блок услуг */
+
+.services-three-images {
+  position: relative;
+  width: 546px;
+  height: 544px;
+  flex: 1;
+}
+
+.services-three-images img {
+  position: absolute;
+}
+
+.services-three-images img:nth-child(1) {
+  max-width: 300px;
+  min-height: 400px;
+  object-fit: cover;
+  top: 0;
+}
+
+.services-three-images img:nth-child(2) {
+  position: absolute;
+  min-width: 360px;
+  max-height: 360px;
+  top: 100px;
+  right: 0;
+  z-index: 1;
+}
+
+.services-three-images img:nth-child(3) {
+  max-width: 180px;
+  max-height: 220px;
+  bottom: 0;
+  left: 100px;
+  z-index: 2;
+}
+
+.price-three-label {
+  position: absolute;
+  right: 5px;
+  top: 43px;
+  font-size: 32px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+.price-three-label-en {
+  position: absolute;
+  right: 5px;
+  top: 50px;
+  font-size: 24px;
+  color: var(--gold150);
+  font-family: "Miama Nueva";
+}
+
+#services,
+#services-us {
+  position: relative;
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+/* для десктопа */
+@media (max-width: 1024px) {
+  #services,
+  #services-us {
+    position: relative;
+    padding-top: 72px;
+    margin-top: -72px;
+  }
+
+  .services-container {
+    padding: 64px 24px 48px 24px;
+  }
+
+  .services-content {
+    padding: 0;
+  }
+
+  .services-text {
+    padding: 0;
+  }
+
+  .services-images,
+  .services-two-images,
+  .services-three-images {
+    width: 476px;
+    height: 562px;
+  }
+
+  .services-container h1 {
+    padding-bottom: 40px;
+  }
+
+  /* Первый блок */
+
+  .services-images img:nth-child(1) {
+    max-width: 360px;
+    min-height: 440px;
+  }
+
+  .services-images img:nth-child(2) {
+    top: 120px;
+    left: 65px;
+  }
+
+  /* Второй блок */
+  .services-two-images img:nth-child(2) {
+    max-width: 290px;
+    min-height: 348px;
+    top: 100px;
+  }
+
+  .services-two-images img:nth-child(3) {
+    left: 220px;
+  }
+
+  /* Третий блок */
+
+  .services-three-images img:nth-child(1) {
+    max-width: 260px;
+    min-height: 350px;
+  }
+
+  .services-three-images img:nth-child(2) {
+    min-width: 240px;
+    max-height: 300px;
+    object-fit: cover;
+    top: 140px;
+  }
+
+  .price-three-label {
+    top: 95px;
+  }
+  .price-three-label-en {
+    top: 95px;
+  }
+}
+
+/* для мобильных устройств */
+@media (max-width: 938px) {
+  #services,
+  #services-us {
+    position: relative;
+    padding-top: 72px;
+    margin-top: -72px;
+  }
+
+  .services-container {
+    padding: 32px 16px 24px 16px;
+  }
+
+  .services-content {
+    padding: 0;
+  }
+
+  .services-text {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .services-text .text-item1 {
+    font-size: 15px;
+    padding-bottom: 16px;
+  }
+
+  .services-text .text-item2 {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  .services-subtitle {
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+  }
+
+  .services-section {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+    gap: 0;
+  }
+
+  .services-images {
+    position: relative;
+    display: flex;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .services-images img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .services-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Первый блок */
+
+  .services-images img:nth-child(1) {
+    order: 1;
+    max-width: 330px;
+    min-height: 300px;
+    content: url("../assets/images/services/services-image1.png");
+  }
+
+  .services-images img:nth-child(2) {
+    order: 3;
+    content: url("../assets/images/services/services-image-mobile2.png");
+  }
+
+  .services-images img:nth-child(3) {
+    order: 2;
+    min-width: 330px;
+    max-height: 300px;
+  }
+
+  .services-images img:nth-child(1),
+  .services-images img:nth-child(2),
+  .services-images img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+
+  .price-label,
+  .price-two-label,
+  .price-three-label {
+    display: none;
+  }
+
+  .price-label-en,
+  .price-two-label-en,
+  .price-three-label-en {
+    display: none;
+  }
+
+  .price-label-mob {
+    display: flex;
+    justify-content: right;
+    font-size: 16px;
+    color: var(--gold150);
+    font-family: "Miama Nueva";
+    order: 2;
+    height: 35px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Второй блок услуг */
+
+  .services-two-images {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+
+  .services-two-images img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .services-two-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-two-images img:nth-child(1) {
+    order: 1;
+    content: url("../assets/images/services/services-image-mobile4.png");
+  }
+
+  .services-two-images img:nth-child(2) {
+    order: 3;
+    max-width: 330px;
+    min-height: 300px;
+  }
+
+  .services-two-images img:nth-child(3) {
+    order: 2;
+    content: url("../assets/images/services/services-image-mobile5.png");
+  }
+
+  .services-two-images img:nth-child(1),
+  .services-two-images img:nth-child(2),
+  .services-two-images img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+
+  /* Третий блок услуг */
+
+  .services-three-images {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+    order: 1;
+  }
+
+  .services-three-images img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+
+  .services-three-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-three-images img:nth-child(1) {
+    order: 2;
+    max-width: 330px;
+    min-height: 300px;
+    content: url("../assets/images/services/services-image-mobile8.png");
+  }
+
+  .services-three-images img:nth-child(2) {
+    order: 1;
+    content: url("../assets/images/services/services-image-mobile7.png");
+  }
+
+  .services-three-images img:nth-child(3) {
+    order: 3;
+    content: url("../assets/images/services/services-image-mobile9.png");
+  }
+
+  .services-three-images img:nth-child(2),
+  .services-three-images img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+}

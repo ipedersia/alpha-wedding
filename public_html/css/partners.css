@@ -1,0 +1,31 @@
+/* Партнеры */
+
+.partners-container {
+  padding: 96px 88px 64px 88px;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .partners-container {
+    padding: 64px 24px 48px 24px;
+  }
+}
+
+@media (max-width: 938px) {
+  .partners-container {
+    padding: 32px 16px 24px;
+  }
+  .partners-logos {
+    justify-content: space-around;
+    gap: 24px;
+  }
+  .partners-logos img {
+    max-width: 130px;
+    height: 37px;
+  }
+}

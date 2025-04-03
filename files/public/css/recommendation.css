@@ -1,0 +1,58 @@
+/* Рекомендации */
+
+.recommendation-container {
+  padding: 96px 48px 64px 48px;
+}
+
+.recommendation-content {
+  padding: 0 114px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.content-text-block h2 {
+  padding-bottom: 24px;
+}
+
+.content-text-block p {
+  font-family: Montserrat;
+  color: var(--gold150);
+  font-size: 20px;
+  padding-bottom: 24px;
+}
+
+.content-image-block img {
+  width: 318px;
+  height: 465px;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .recommendation-container {
+    padding: 64px 24px 48px 24px;
+  }
+
+  .recommendation-content {
+    padding: 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .recommendation-container {
+    padding: 24px 16px;
+  }
+
+  .recommendation-content {
+    display: block;
+  }
+
+  .content-text-block p {
+    font-size: 15px;
+  }
+
+  .content-image-block {
+    display: none;
+  }
+}

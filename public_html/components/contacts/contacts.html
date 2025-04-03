@@ -1,0 +1,74 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.css"
+/>
+
+<div class="scrollable-contacts"></div>
+<div class="_container-contact" id="contacts">
+  <div class="contact-container" id="contactSection">
+    <div class="contact-section">
+      <div class="contact-info">
+        <h2>Свяжитесь с нами</h2>
+        <p class="info-title">Оставьте заявку и мы с Вами свяжемся</p>
+        <p class="info-network">
+          В рабочее время наш менеджер напишет Вам в <a href="https://wa.me/995568766356" target="_blank">WhatsApp</a> или
+          <a href="https://t.me/alpha_wed" target="_blank">Telegram</a>
+        </p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <span class="error name" id="nameErrorRu">Пожалуйста, введите ваше имя</span>
+          <input type="text" id="name" placeholder="Ваше имя" />
+        </div>
+
+        <div class="form-group">
+          <span class="error" id="phoneErrorRu">Введите корректный номер</span>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Ваш номер телефона"
+            class="iti-phone"
+          />
+        </div>
+
+        <button type="submit">Отправить</button>
+        <p class="info-network">
+          *нажимая на кнопку Вы соглашаетесь на обработку персональных данных
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Сообщение об успешной отправке -->
+<div class="_message-contact" id="successMessage">
+  <div class="message-container">
+    <div class="message-section">
+      <div class="icon-cross" id="closeButton">
+        <img
+          class="cross_message"
+          src="/assets/icons/cross.svg"
+          alt="cross_message"
+        />
+        <img
+          class="cross_mob_message"
+          src="/assets/icons/close_mob.svg"
+          alt="cross_mob_message"
+        />
+      </div>
+      <hr class="contact-separator" />
+      <div class="text-message">
+        <h2>Спасибо!</h2>
+        <p class="content-text">
+          В рабочее время наш менеджер напишет Вам <br />
+          в
+          <a href="https://wa.me/995568766356" target="_blank">WhatsApp</a> или
+          <a href="https://t.me/alpha_wed" target="_blank">Telegram</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>

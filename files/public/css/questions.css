@@ -1,0 +1,152 @@
+/* Почему Грузия */
+
+.questions-container {
+  padding: 96px 48px 64px 48px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.swiper-slide {
+  position: relative;
+  max-width: 432px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--peach50);
+  padding: 32px 40px;
+  box-shadow: -4px 4px 12px 0px var(--shadow, rgba(70, 47, 47, 0.15));
+  text-align: left;
+}
+
+/* .swiper-slide-card-number {
+    position: absolute;
+    max-width: 100px;
+    top: -15px;
+    left: -8px;
+    font-size: 36px;
+    color: var(--gold150);
+    pointer-events: none;
+    font-family: "Miama Nueva";
+  }
+  .swiper-slide-card-number img{
+    width: 100%;
+    height: auto;
+  } */
+
+.card-number-item1 {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  width: 45px;
+  height: 40px;
+  content: url("../assets/icons/qustions/one.svg");
+  background-size: 32px;
+  background-repeat: no-repeat;
+}
+
+.card-number-item2 {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  width: 45px;
+  height: 40px;
+  content: url("../assets/icons/qustions/two.svg");
+  background-size: 32px;
+  background-repeat: no-repeat;
+}
+
+.card-number-item3 {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  width: 45px;
+  height: 40px;
+  content: url("../assets/icons/qustions/three.svg");
+  background-size: 32px;
+  background-repeat: no-repeat;
+}
+
+.swiper-slide-card h3 {
+  color: var(--gold150);
+  margin-bottom: 12px;
+  font-family: "MontserratBold", sans-serif;
+  font-size: calc(15px + (20 - 15) * ((100vw - 375px) / (1440 - 375)));
+}
+
+.swiper-slide-card p {
+  color: var(--gold150);
+  font-weight: 400;
+  font-size: calc(15px + (20 - 15) * ((100vw - 375px) / (1440 - 375)));
+  font-family: "Montserrat";
+}
+
+/* для десктопа */
+@media (max-width: 1024px) {
+  .questions-container {
+    padding: 64px 24px 48px 24px;
+  }
+
+  .swiper-wrapper {
+    gap: 20px;
+  }
+  .wiper-slide {
+    height: 244px;
+  }
+
+  .questions-container h1 {
+    padding-bottom: 40px;
+  }
+}
+
+/* для мобильных устройств */
+@media (max-width: 938px) {
+  .questions-container {
+    padding: 32px 16px 4px;
+  }
+
+  .questions-header {
+    padding-bottom: 12px;
+  }
+
+  .swiper-container {
+    padding: 20px 10px;
+    overflow-x: auto;
+  }
+
+  .swiper-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .swiper-wrapper {
+    gap: 20px;
+    width: max-content;
+  }
+
+  .swiper-slide {
+    width: 300px;
+    padding: 16px;
+  }
+
+  .card-number-item1,
+  .card-number-item2,
+  .card-number-item3 {
+    background-size: 24px;
+    width: 34px;
+    height: 40px;
+  }
+}
+
+/* @media screen and (-webkit-device-pixel-ratio: 2) and (hover: none) and (pointer: coarse) {
+  .swiper-slide-card-number {
+    transform: translateY(-5px);
+  }
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (hover: none) and (pointer: coarse) {
+  .swiper-slide-card-number {
+    transform: translateY(-5px);
+  }
+} */

@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="../../css/reviews.css">
+
+<div id="reviews" class="_container">
+  <div class="scrollable-reviews"></div>
+  <div class="reviews-container">
+    <h2>Отзывы</h2>
+
+    <div class="reviews-slider">
+      <div class="review-slide active">
+        <picture class="review-img">
+          <source
+            srcset="/assets/images/reviews/reviews-image1.png"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="/assets/images/reviews/mob1.png"
+            alt="Описание изображения"
+          />
+        </picture>
+        <div class="review-content">
+          <p class="review-subtitle">Памела и Матеуш</p>
+          <p class="review-text">
+            Спасибо за отличную работу! Свадьба прошла замечательно, и все гости
+            остались довольны.
+          </p>
+          <p class="review-text">
+            Были моменты стресса, но в итоге мы очень довольны результатом
+            и вашим профессионализмом. Несмотря на языковой барьер,
+            вы оперативно реагировали и учли все наши пожелания.
+          </p>
+          <p class="review-text3">Еще раз большое спасибо!</p>
+        </div>
+      </div>
+
+      <div class="review-slide">
+        <picture class="review-img">
+          <source
+            srcset="/assets/images/reviews/reviews-image3.png"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="/assets/images/reviews/mob2.png"
+            alt="Описание изображения"
+          />
+        </picture>
+        <div class="review-content">
+          <p class="review-subtitle">Денис и Надежда</p>
+          <p class="review-text">
+            Нашу свадьбу мы запомним навсегда! Будем советовать вас всем своим
+            друзьям и знакомым. Обязательно оставим отзывы во всех группах
+            в Израиле, где многие планируют свадьбы в Грузии. Ваша помощь
+            сделала этот день особенным — все было организовано идеально, и
+            каждый момент был по-настоящему волшебным.
+          </p>
+          <p class="review-text3">
+            Спасибо за внимание к деталям, профессионализм и заботу о наших
+            пожеланиях.
+          </p>
+        </div>
+      </div>
+
+      <div class="review-slide">
+        <picture class="review-img">
+          <source
+            srcset="/assets/images/reviews/wedding-photo.png"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="/assets/images/reviews/mob3.png"
+            alt="Описание изображения"
+          />
+        </picture>
+        <div class="review-content">
+          <p class="review-subtitle">Наталья и Павел</p>
+          <p class="review-text">
+            Здравствуйте! Хотим сказать большое спасибо за вашу помощь. Нам уже
+            подтвердили все документы, и все приняли без вопросов.
+          </p>
+          <p class="review-text3">
+            Честно, переживали, что будут какие-то проблемы, так как у нас тут
+            всегда находят к чему придраться. Но, благодаря вам, все прошло
+            гладко. Еще раз спасибо за поддержку!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Навигация для слайдера -->
+    <div class="slider-navigation">
+      <div class="slider-navigation">
+        <span class="nav-prev" onclick="moveSlide(-1)"
+          ><img
+            class="left-arrow"
+            src="/assets/icons/reviews/left-arrow.png"
+            alt=""
+            style = "cursor: pointer"
+        /></span>
+        <span class="nav-dot active" onclick="currentSlide(1)"></span>
+        <span class="nav-dot" onclick="currentSlide(2)"></span>
+        <span class="nav-dot" onclick="currentSlide(3)"></span>
+        <span class="nav-next" onclick="moveSlide(1)"
+          ><img
+            class="right-arrow"
+            src="/assets/icons/reviews/right-arrow.png"
+            alt=""
+              style = "cursor: pointer"
+        /></span>
+      </div>
+    </div>
+  </div>
+</div>

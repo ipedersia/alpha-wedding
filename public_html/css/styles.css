@@ -1,0 +1,461 @@
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/font-family/CormorantInfant-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font-family/Montserrat-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url("/font-family/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Miama Nueva";
+  src: url("/font-family/MiamaNueva.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  transition: ease-in 0.25s;
+}
+:root {
+  --white: #ffffff;
+  --peach50: #f9f5f4;
+  --peach100: #f3cdc4;
+  --pink100: #ffebe6;
+  --gray100: #cccccc;
+  --golg100: #dcc6a0;
+  --gold150: #988e7b;
+  --black100: #473f30;
+  --black: #000;
+}
+
+._container {
+  width: min(100% - 5px, 1440px);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(
+    44px,
+    calc(44px + (60 - 44) * ((100vw - 1024px) / (1440 - 1024))),
+    60px
+  );
+  color: var(--gold150);
+  text-transform: uppercase;
+  font-family: "Cormorant Infant";
+  font-weight: 400;
+  padding: clamp(
+      10px,
+      calc(10px + (50 - 10) * ((100vw - 1024px) / (1440 - 1024))),
+      50px
+    )
+    0 20px 0;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: var(--gold150);
+  font-family: "Cormorant Infant";
+  font-size: 52px;
+  font-weight: 400;
+  padding-bottom: 80px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--gray100);
+  margin: 40px 0;
+}
+
+.consultation-button {
+  width: 318px;
+  height: 66px;
+  border: 1px solid var(--black100);
+  background: var(--peach50);
+  color: var(--black100);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  transition: ease-in 0.25s;
+}
+
+.consultation-button:hover {
+  background: var(--pink100);
+}
+
+.consultation-button:focus {
+  background: var(--peach100);
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 924px) {
+  h2 {
+    font-size: 28px;
+    padding-bottom: 24px;
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+
+  .consultation-button {
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+  }
+}
+
+/* Контакты */
+._container-contact {
+  position: relative;
+  width: min(100%);
+  margin: 0 auto;
+  background: var(--peach50);
+}
+
+.contact-container {
+  padding: 48px 24px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 calc(114px * ((100vw - 1024px) / (1440 - 1024)));
+  gap: 20px;
+}
+
+.contact-info {
+  max-width: 546px;
+}
+
+.contact-info h2 {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 24px;
+}
+
+.info-title {
+  color: var(--gold150);
+  font-size: 20px;
+  padding-bottom: 16px;
+  font-family: "Montserrat";
+}
+
+.info-network {
+  color: var(--black100);
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.info-network a {
+  color: var(--black100);
+  font-size: 16px;
+  padding-bottom: 24px;
+  font-family: "Montserrat";
+  text-decoration: underline;
+}
+
+.info-network a:hover {
+  color: var(--golg100);
+}
+
+.contact-form {
+  max-width: 546px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  color: var(--gray100);
+}
+
+.form-group {
+  margin-bottom: 36px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  padding: 20px;
+  font-family: "Montserrat";
+  color: var(--gray100);
+  font-size: 20px;
+  width: 100%;
+  color: var(--black);
+  border: 1px solid var(--gray100);
+}
+
+/* Стили при фокусе */
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+  border-radius: 0;
+  border: 1px solid var(--black);
+  outline: none;
+  opacity: 1; /* Убираем прозрачность */
+  color: var(--black);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="tel"]::placeholder {
+  opacity: 0.5;
+}
+
+.form-group input[type="text"]:focus::placeholder,
+.form-group input[type="tel"]:focus::placeholder {
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+input:focus-visible {
+  outline: none;
+}
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  font-size: 15px; /* Меньший шрифт */
+  transform: scale(1); /* Принудительное предотвращение масштабирования */
+}
+
+.iti {
+  width: 100%;
+  position: relative;
+}
+
+.error {
+  color: var(--black100);
+  font-size: 18px;
+  display: none;
+  font-family: Montserrat;
+  margin-top: -20px;
+  padding-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: var(--gray100);
+  color: var(--white);
+  font-family: Montserrat;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid var(--gray100);
+  cursor: pointer;
+  margin-bottom: 36px;
+}
+
+.contact-form button:hover {
+  background: var(--white);
+  border: 1px solid var(--black100);
+  color: var(--black100);
+}
+
+.contact-form button:active {
+  background: var(--black100);
+  border: 1px solid var(--black);
+  color: var(--peach50);
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 48px 24px;
+  }
+
+  .contact-section {
+    padding: 0;
+  }
+  .info-title {
+    padding-bottom: 24px;
+  }
+}
+
+/* Сообщение после успешной отправки */
+._message-contact {
+  display: none;
+  background: var(--peach50);
+  min-height: 521px;
+}
+
+.message-section h2 {
+  padding-bottom: 0;
+}
+
+.text-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 288px;
+}
+
+.content-text {
+  font-family: "Montserrat";
+  color: var(--gold150);
+  padding-top: 24px;
+  font-size: 16px;
+}
+
+.content-text a {
+  color: var(--black100);
+  font-size: 16px;
+  font-family: "Montserrat";
+  transition: ease-in 0.25s;
+  text-decoration: underline;
+}
+
+.content-text a:hover {
+  color: var(--golg100);
+}
+
+.icon-cross {
+  display: flex;
+  justify-content: right;
+}
+
+.icon-cross img {
+  padding: 24px;
+  cursor: pointer;
+}
+
+.cross_mob_message {
+  display: none;
+}
+
+.contact-separator {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .contact-container {
+    padding: 24px 16px;
+  }
+
+  .contact-section {
+    display: block;
+  }
+
+  .contact-info {
+    margin-bottom: 16px;
+    min-width: 100%;
+  }
+
+  .contact-info h2 {
+    padding-bottom: 20px;
+  }
+
+  .info-title {
+    font-size: 15px;
+    padding-bottom: 4px;
+  }
+
+  .info-network,
+  .info-network a {
+    font-size: 12px;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="tel"] {
+    margin-bottom: 0;
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .error {
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+
+  .name {
+    padding-top: 16px;
+  }
+
+  .contact-form button {
+    padding: 16px;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  /* Сообщение об успешной отправке */
+  .text-message {
+    display: block;
+    justify-content: left;
+    text-align: left;
+    padding: 24px 16px;
+  }
+
+  .message-section h2 {
+    justify-content: left;
+  }
+
+  .content-text {
+    padding-top: 20px;
+  }
+
+  .cross_mob_message {
+    display: flex;
+  }
+
+  .cross_message {
+    display: none;
+  }
+
+  .icon-cross {
+    padding: 12px 16px;
+  }
+
+  .icon-cross img {
+    padding: 12px;
+  }
+
+  .contact-separator {
+    display: flex;
+    margin: 0;
+  }
+}

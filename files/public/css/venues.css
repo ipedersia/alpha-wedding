@@ -1,0 +1,560 @@
+.venues-container {
+  padding: clamp(64px, 6vw, 96px) clamp(24px, 3vw, 48px) clamp(48px, 4vw, 64px)
+    clamp(24px, 3vw, 48px);
+}
+.venues-container h2 {
+  text-align: center;
+}
+.header-desktop {
+  display: block;
+}
+.header-mob {
+  display: none;
+}
+.venues-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2vw, 24px);
+  padding: 0 clamp(0px, 6vw, 114px);
+}
+.venues-header-mob {
+  display: none;
+}
+.venues-label-mob {
+  display: none;
+}
+
+.venues-text h3 {
+  font-family: "Cormorant Infant";
+  font-size: 40px;
+  color: var(--gold150);
+  font-weight: 400;
+  padding-bottom: 24px;
+}
+.venues-text p {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gold150);
+  line-height: normal;
+}
+.venues-description p {
+  padding-bottom: 24px;
+}
+.cost {
+  margin-bottom: 24px;
+}
+.cost p {
+  padding-bottom: 8px;
+}
+.cost p:last-child {
+  padding-bottom: 0; /* убираем padding у последнего элемента */
+}
+
+:is(.item1, .item2, .item3) {
+  padding: 0 16px;
+}
+:is(.item4, .item5) {
+  padding: 0 16px 0 0;
+}
+.line {
+  border: none;
+  height: 1px;
+  background-color: var(--gray100);
+}
+
+/* первый блок Дворец бракосочетания "Конка" */
+.venues-images {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+.venues-images img {
+  position: absolute;
+}
+.venues-images img:nth-child(1) {
+  position: absolute;
+  max-width: 280px;
+  max-height: 340px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.venues-images img:nth-child(2) {
+  max-width: 380px;
+  max-height: 280px;
+  top: 25%;
+  left: 0;
+}
+
+.venues-images img:nth-child(3) {
+  max-width: 200px;
+  max-height: 220px;
+  bottom: 0;
+  left: 8%;
+  z-index: 2;
+}
+.venues-label {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  font-family: "Miama Nueva";
+  font-size: 32px;
+  color: var(--gold150);
+}
+
+/* второй блок Дворец бракосочетания в Доме Юстиции */
+
+.venues-images-item2 {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+.venues-images-item2 img {
+  position: absolute;
+}
+.venues-images-item2 img:nth-child(2) {
+  max-width: 460px;
+  max-height: 380px;
+  top: 0;
+  right: 0;
+}
+.venues-images-item2 img:nth-child(1) {
+  max-width: 387px;
+  min-height: 212px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.venues-label-item2 {
+  position: absolute;
+  bottom: 115px;
+  right: 0;
+  font-family: "Miama Nueva";
+  font-size: 32px;
+  color: var(--gold150);
+}
+
+/* третий блок Общий зал в Доме Юстиции */
+
+.venues-images-item3 {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+.venues-images-item3 img {
+  position: absolute;
+}
+.venues-images-item3 img:nth-child(2) {
+  max-width: 380px;
+  max-height: 280px;
+  top: 19%;
+  left: 0;
+  z-index: 1;
+}
+.venues-images-item3 img:nth-child(3) {
+  max-width: 260px;
+  max-height: 340px;
+  top: 0;
+  right: 0;
+}
+.venues-images-item3 img:nth-child(1) {
+  max-width: 180px;
+  min-height: 224px;
+  bottom: 0;
+  left: 10%;
+  z-index: 2;
+}
+.venues-label-item3 {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  font-family: "Miama Nueva";
+  font-size: 32px;
+  color: var(--gold150);
+}
+
+/* четвертый блок Дворец бракосочетания "Дельфин" */
+
+.venues-images-item4 {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+.venues-images-item4 img {
+  position: absolute;
+}
+.venues-images-item4 img:nth-child(1) {
+  max-width: 404px;
+  max-height: 336px;
+  top: 0;
+  left: 0;
+}
+.venues-images-item4 img:nth-child(2) {
+  max-width: 262px;
+  max-height: 300px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.venues-label-item4 {
+  position: absolute;
+  bottom: 160px;
+  left: 0;
+  font-family: "Miama Nueva";
+  font-size: 32px;
+  color: var(--gold150);
+}
+
+/* пятый блок Общий зал в Доме Юстиции */
+
+.venues-images-item5 {
+  position: relative;
+  width: 546px;
+  height: 544px;
+}
+.venues-images-item5 img {
+  position: absolute;
+}
+.venues-images-item5 img:nth-child(1) {
+  max-width: 380px;
+  max-height: 440px;
+  bottom: 0;
+  left: 0;
+}
+.venues-images-item5 img:nth-child(2) {
+  max-width: 320px;
+  max-height: 220px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.venues-label-item5 {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  font-family: "Miama Nueva";
+  font-size: 32px;
+  color: var(--gold150);
+}
+
+#venues,
+#venues-en {
+  position: relative;
+  padding-top: 100px; /* Отступ для контента */
+  margin-top: -100px; /* Компенсация для якорной ссылки */
+}
+
+@media (max-width: 1024px) {
+  #venues,
+  #venues-en {
+    position: relative;
+    padding-top: 72px; /* Отступ для контента */
+    margin-top: -72px; /* Компенсация для якорной ссылки */
+  }
+  .venues-container {
+    padding: 64px 24px 48px 24px;
+  }
+  .venues-content {
+    padding: 0;
+  }
+  .venues-images,
+  .venues-images-item2,
+  .venues-images-item3,
+  .venues-images-item4,
+  .venues-images-item5 {
+    max-width: 478px;
+  }
+  :is(.item1, .item2, .item3) {
+    padding: 0;
+  }
+}
+
+@media (max-width: 924px) {
+  #venues,
+  #venues-en {
+    position: relative;
+    padding-top: 72px; /* Отступ для контента */
+    margin-top: -72px; /* Компенсация для якорной ссылки */
+  }
+
+  .venues-container {
+    padding: 32px 16px 24px 16px;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+  .header-mob {
+    display: block;
+    font-size: 28px;
+    width: 343px;
+    margin: 0 auto;
+  }
+  .header-mob h2 {
+    white-space: nowrap;
+    font-size: 28px;
+    text-align: center;
+  }
+  .venues-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .venues-header-mob {
+    display: flex;
+    font-size: 24px;
+    font-family: "Cormorant Infant";
+    color: var(--gold150);
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .venues-text h3 {
+    display: none;
+  }
+  .venues-description p {
+    padding-bottom: 16px;
+  }
+  .venues-description p:last-child {
+    padding-bottom: 24px;
+  }
+  .venues-images,
+  .venues-images-item2,
+  .venues-images-item3,
+  .venues-images-item4,
+  .venues-images-item5 {
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .venues-label,
+  .venues-label-item2,
+  .venues-label-item3,
+  .venues-label-item4,
+  .venues-label-item5 {
+    display: none;
+  }
+  .venues-label-mob {
+    display: flex;
+    font-size: 16px;
+    font-family: "Miama Nueva";
+    color: var(--gold150);
+    height: 35px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .venues-text {
+    order: 2;
+  }
+  :is(.item4, .item5) {
+    padding: 0;
+  }
+  .venues-description p,
+  .cost p {
+    font-size: 15px;
+  }
+
+  /* первый блок */
+  .venues-images {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  .venues-images img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .venues-images::-webkit-scrollbar {
+    display: none;
+  }
+  .venues-images img:nth-child(1),
+  .venues-images img:nth-child(2),
+  .venues-images img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+
+  .venues-images img:nth-child(1) {
+    order: 1;
+    max-width: 330px;
+    min-height: 300px;
+    content: url("../assets/images/venues/venues-image-mob1.png");
+  }
+
+  .venues-images img:nth-child(2) {
+    order: 3;
+    content: url("../assets/images/venues/venues-image-mob3.png");
+  }
+
+  .venues-images img:nth-child(3) {
+    order: 2;
+    min-width: 330px;
+    max-height: 300px;
+    content: url("../assets/images/venues/venues-image-mob2.png");
+  }
+
+  /* второй блок */
+  .venues-images-item2 {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  .venues-images-item2 img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .venues-images-item2::-webkit-scrollbar {
+    display: none;
+  }
+  .venues-images-item2 img:nth-child(1),
+  .venues-images-item2 img:nth-child(2) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+
+  .venues-images-item2 img:nth-child(1){
+    order: 1;
+    content: url("../assets/images/venues/venues-image-mob4.png");
+  }
+  .venues-images-item2 img:nth-child(2) {
+    order: 2;
+    content: url("../assets/images/venues/venues-image-mob5.png");
+  }
+
+  /* третий блок */
+  .venues-images-item3 {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  .venues-images-item3 img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .venues-images-item3::-webkit-scrollbar {
+    display: none;
+  }
+  .venues-images-item3 img:nth-child(1),
+  .venues-images-item3 img:nth-child(2),
+  .venues-images-item3 img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+
+  .venues-images-item3 img:nth-child(1){
+    order: 1;
+    content: url("../assets/images/venues/venues-image-mob5.png");
+  }
+  .venues-images-item3 img:nth-child(2) {
+    order: 2;
+    content: url("../assets/images/venues/venues-image-mob6.png");
+  }
+  .venues-images-item3 img:nth-child(3) {
+    order: 3;
+    content: url("../assets/images/venues/venues-image-mob7.png");
+  }
+
+  /* четвертый блок */
+  .venues-images-item4 {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  .venues-images-item4 img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .venues-images-item4::-webkit-scrollbar {
+    display: none;
+  }
+  .venues-images-item4 img:nth-child(1),
+  .venues-images-item4 img:nth-child(2) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+  .venues-images-item4 img:nth-child(1){
+    order: 1;
+    content: url("../assets/images/venues/venues-image-mob8.png");
+  }
+  .venues-images-item4 img:nth-child(2) {
+    order: 2;
+    content: url("../assets/images/venues/venues-image-mob9.png");
+  }
+  /* пятый блок */
+  .venues-images-item5 {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  .venues-images-item5 img {
+    position: static;
+    width: 330px;
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+  .venues-images-item5::-webkit-scrollbar {
+    display: none;
+  }
+  .venues-images-item5 img:nth-child(1),
+  .venues-images-item5 img:nth-child(2) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+  }
+  .venues-images-item5 img:nth-child(1){
+    order: 1;
+    content: url("../assets/images/venues/venues-image-mob10.png");
+  }
+  .venues-images-item5 img:nth-child(2) {
+    order: 2;
+    content: url("../assets/images/venues/venues-image-mob11.png");
+  }
+}
+@media (max-width: 360px) {
+  .header-desktop {
+    display: block;
+    font-size: 28px;
+    text-align: center;
+  }
+  .header-mob {
+    display: none;
+  }
+}

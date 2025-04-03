@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="../../css/hero-section.css">
+
+<header class="header">
+  <div class="_container">
+    <div class="header-container">
+      <a href="#"
+        ><img class="logo" src="/assets/images/hero-section/Logo.svg" alt="logo"
+      /></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="#about-en">About us</a></li>
+          <li><a href="#services-en">Services</a></li>
+          <li><a href="#" id="scroll-to-contacts-en">Submit a request</a></li>
+          <li><a href="#venues-en">Locations</a></li>
+          <li><a href="#reviews-en">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="content-icons">
+        <div class="language-container">
+          <div id="language-switcher">
+            <button id="language-button" onclick="toggleLanguage()">
+              <p>RU</p>
+            </button>
+          </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <!-- Иконка меню (по умолчанию видна) -->
+          <img
+            src="/assets/icons/hero-section/menu.svg"
+            alt="menu"
+            class="menu-icon menu-icon--menu"
+          />
+          <!-- Иконка крестика (скрыта по умолчанию) -->
+          <img
+            src="/assets/icons/close_mob.svg"
+            alt="close"
+            class="menu-icon menu-icon--close"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="menu-mobile">
+  <nav>
+    <ul>
+      <li><a href="#about-en">About us</a></li>
+      <li><a href="#services-en">Services</a></li>
+      <li><a href="#" id="scroll-to-contacts-mob-en">Submit a request</a></li>
+      <li><a href="#venues-en">Locations</a></li>
+      <li><a href="#reviews-en">Reviews</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="hero-section _container">
+  <div class="photo-container">
+    <img src="/assets/images/hero-section/hero-main.png" alt="main" />
+  </div>
+  <div class="content-container">
+    <div class="img-container">
+      <div class="img-container-flower">
+        <picture>
+          <!-- Изображение для экрана 1440px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-flowers.png"
+            media="(min-width: 1440px)"
+          />
+
+          <!-- Изображение для экрана 1024px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-flowers.png"
+            media="(max-width: 1439px) and (min-width: 1025px)"
+          />
+
+          <img src="/assets/images/hero-section/hero-flowers1024.png" alt="flowers" />
+        </picture>
+      </div>
+      <div class="img-container-betrothal">
+        <picture>
+          <!-- Изображение для экрана 1440px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-betrothal.png"
+            media="(min-width: 1440px)"
+          />
+
+          <!-- Изображение для экрана 1024px и больше -->
+          <source
+            srcset="/assets/images/hero-section/hero-betrothal.png"
+            media="(max-width: 1439px) and (min-width: 1025px)"
+          />
+
+          <img src="/assets/images/hero-section/hero-betrothal1024.png" alt="flowers" />
+        </picture>
+      </div>
+    </div>
+    <div class="blok-header">
+      <h1>Marriage registration in Georgia for foreigners</h1>
+      <p>Make love in one day with international recognition!</p>
+      <a href="#contacts-en"
+        ><button class="consultation-button">Order a consultation</button></a
+      >
+    </div>
+  </div>
+</div>

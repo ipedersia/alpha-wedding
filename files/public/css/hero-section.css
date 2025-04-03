@@ -1,0 +1,370 @@
+/* Hero-section */
+
+.header {
+  width: 100%;
+  background: var(--peach50);
+  border-bottom: 1px solid rgba(152, 142, 123, 0.2);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  max-width: 1440px;
+  height: 100px;
+}
+.menu ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+.menu ul li a {
+  color: var(--black100);
+}
+
+.menu ul li a:hover {
+  color: var(--golg100);
+}
+
+.menu ul li a:active {
+  text-decoration: underline;
+}
+
+.menu.active {
+  display: block; /* Показываем меню при активации */
+}
+
+.menu-toggle {
+  display: none; /* По умолчанию иконка скрыта */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.hero-section {
+  display: flex;
+  padding: clamp(40px, 4vw, 48px) clamp(24px, 2vw, 48px) clamp(48px, 5vw, 64px)
+    clamp(24px, 2vw, 48px);
+  gap: clamp(20px, 2vw, 24px);
+  /* gap: clamp(10px, 1vw, 12px); */
+  margin-top: 100px !important;
+}
+
+.content-container {
+  max-height: 568px;
+}
+.content-container p {
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: var(--gold150);
+  padding-bottom: 40px;
+}
+.photo-container {
+  width: auto;
+  height: auto;
+}
+.photo-container img {
+  min-width: 432px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.img-container {
+  max-width: 546px;
+  display: flex;
+  gap: 24px;
+}
+.img-container-flower {
+  width: auto;
+  height: auto;
+}
+
+.img-container {
+  display: flex;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Переключатель языка */
+
+.language-container {
+  display: flex;
+  cursor: pointer;
+}
+
+#language-switcher button {
+  display: flex;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  color: var(--black100);
+  transition: ease-in 0.25s;
+}
+
+#language-switcher button:hover {
+  color: var(--golg100);
+}
+
+/* Скрываю моб меню */
+
+.menu-mobile ul {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    margin-top: 72px !important;
+  }
+
+  .logo {
+    width: 125px;
+    height: 48px;
+  }
+
+  .header {
+    height: 72px;
+  }
+
+  .header-container {
+    padding: 12px 16px;
+    height: 72px;
+  }
+
+  .content-container {
+    max-width: 477px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .photo-container img {
+    min-width: 479px;
+    max-height: 616px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .img-container {
+    gap: 20px;
+  }
+  .icon-basketball {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  #language-switcher button {
+    font-size: 15px;
+  }
+
+  .language-container {
+    display: flex;
+    justify-content: right;
+  }
+
+  .content-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Добавляю меню  */
+
+  /* Скрываем мобильное меню по умолчанию */
+  .menu-mobile {
+    position: fixed;
+    top: 72px;
+    width: 100%;
+    padding: 20px;
+    background: var(--peach50);
+    z-index: 1000;
+    height: auto;
+    border-top: 1px solid rgba(152, 142, 123, 0.2);
+    /* Скрыто по умолчанию */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease, visibility 0s 0.4s;
+  }
+
+  .menu-mobile.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-mobile ul li {
+    margin: 10px 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu-mobile ul li a {
+    display: block;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: var(--black100);
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .menu-mobile ul li a:hover {
+    color: var(--golg100);
+  }
+
+  .menu-mobile ul li a:active {
+    text-decoration: underline;
+  }
+
+  /* Скрываем иконки по умолчанию */
+  .menu-toggle .menu-icon--close {
+    display: none;
+  }
+
+  /* Показываем иконку крестика, когда меню открыто */
+  .menu-toggle.open .menu-icon--menu {
+    display: none;
+  }
+
+  .menu-toggle.open .menu-icon--close {
+    display: block;
+  }
+}
+
+@media (max-width: 879px) {
+  .hero-section {
+    margin-top: 80px !important;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin-top: 100px;
+  }
+
+  .blok-header h1 {
+    font-size: 28px;
+    text-transform: none;
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  h1 {
+    text-transform: none;
+  }
+}
+
+@media (max-width: 526px) {
+  .photo-container {
+    max-height: 422px;
+  }
+
+  .photo-container img {
+    min-width: 343px;
+    max-height: 422px;
+    flex-shrink: 0;
+    object-fit: cover;
+    /* width: 91.47vw; 
+      height: auto; 
+      max-height: 56.27vh; */
+  }
+
+  .content-container {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .blok-header h1 {
+    font-size: 28px;
+    text-transform: none;
+    padding: 0;
+    padding-bottom: 24px;
+  }
+
+  .blok-header p {
+    font-size: 15px;
+    padding-bottom: 24px;
+  }
+
+  /* Размер меню для мобилки */
+  .menu-mobile ul li a {
+    font-size: 15px;
+  }
+
+  #language-switcher button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .photo-container img {
+    min-width: 328px;
+  }
+}

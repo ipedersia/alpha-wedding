@@ -1,15 +1,17 @@
 /* О нас */
 
 .about-container {
-  padding: clamp(64px, 6vw, 96px) clamp(24px, 3vw, 48px) clamp(48px, 4vw, 64px)
-    clamp(24px, 3vw, 48px);
+  padding: clamp(64px, 6vw, 96px) clamp(24px, 3vw, 48px) 
+          clamp(48px, 4vw, 64px) clamp(24px, 3vw, 48px);
 }
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(16px, 2vw, 24px);
   padding: 0 clamp(0px, 6vw, 114px);
 }
+
 .about-text p {
   font-family: "Montserrat";
   color: var(--gold150);
@@ -19,29 +21,39 @@
   margin-bottom: 24px;
   line-height: normal;
 }
+
 .about-text p:last-child {
   margin-bottom: 0px;
 }
+
+/* Контейнер для картинок: 
+   оставляем как было, чтобы их "абсолютно" позиционировать */
 .about-image {
   position: relative;
   width: 546px;
   height: 550px;
 }
+
+/* Правки: убрали max-height, добавили fixed height + object-fit */
 .about-image img:nth-child(1) {
   position: absolute;
-  width: 340px;
-  max-height: 480px;
+  width: 340px;         /* фиксированная ширина */
+  height: 480px;        /* фиксированная высота, вместо max-height */
+  object-fit: cover;    /* «кадрирует» фото */
   top: 0;
   left: 0;
 }
+
 .about-image img:nth-child(2) {
   position: absolute;
-  width: 320px;
-  max-height: 280px;
+  width: 320px;         /* фиксированная ширина */
+  height: 280px;        /* фиксированная высота, вместо max-height */
+  object-fit: cover;
   bottom: 0;
   right: 0;
 }
 
+/* Якорь для #about и #about-en */
 #about,
 #about-en {
   position: relative;
@@ -50,6 +62,7 @@
   pointer-events: none;
 }
 
+/* Адаптивные правки */
 @media (max-width: 1024px) {
   #about,
   #about-en {
@@ -58,15 +71,19 @@
     margin-top: -72px;
     pointer-events: none;
   }
+
   .about-container {
     padding: 64px 24px 48px;
   }
+
   .about-content {
     padding: 0;
   }
+
   .about-image {
     max-width: 478px;
   }
+
   .about-text p {
     padding: 0;
   }
@@ -76,6 +93,7 @@
   .about-container {
     padding: 32px 16px 24px 16px;
   }
+
   .about-content {
     display: flex;
     flex-direction: column;
@@ -98,6 +116,8 @@
     overflow: hidden;
   }
 
+  /* Здесь уже стоял object-fit: cover для обеих картинок,
+     так что просто оставляем как есть */
   .about-image img:nth-child(1),
   .about-image img:nth-child(2) {
     position: static;

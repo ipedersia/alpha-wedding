@@ -52,14 +52,13 @@
 
 .services-images img {
   position: absolute;
-  /* Добавьте display: block; при желании убрать пробелы между img в inline */
 }
 
-/* Было max-width: 363px; min-height: 442px; */
+/* Главное фото (справа вверху) */
 .services-images img:nth-child(1) {
-  width: 363px;        /* <-- фиксируем ширину */
-  height: 442px;       /* <-- фиксируем высоту */
-  object-fit: cover;   /* <-- «кадрирует» фото */
+  max-width: 363px;
+  min-height: 442px;
+  object-fit: cover;
   top: 0;
   right: 0;
 }
@@ -82,21 +81,19 @@
   font-family: "Miama Nueva";
 }
 
-/* Было max-width: 200px; max-height: 260px */
+/* Второе фото (слева, в середине) */
 .services-images img:nth-child(2) {
-  width: 200px;
-  height: 260px;
-  object-fit: cover;
+  max-width: 200px;
+  max-height: 260px;
   top: 100px;
   left: 50px;
   z-index: 1;
 }
 
-/* Было min-width: 280px; max-height: 220px */
+/* Третье фото (снизу слева) */
 .services-images img:nth-child(3) {
-  width: 280px; 
-  height: 220px;
-  object-fit: cover;
+  min-width: 280px;
+  max-height: 220px;
   bottom: 0;
   left: 0;
 }
@@ -119,29 +116,24 @@
   position: absolute;
 }
 
-/* Было max-width: 320px; max-height: 240px */
 .services-two-images img:nth-child(1) {
-  width: 320px;
-  height: 240px;
-  object-fit: cover;
+  max-width: 320px;
+  max-height: 240px;
   top: 0;
   right: 0;
 }
 
-/* Было max-width: 360px; min-height: 400px */
 .services-two-images img:nth-child(2) {
-  width: 360px;
-  height: 400px;
+  max-width: 360px;
+  min-height: 400px;
   object-fit: cover;
   top: 100px;
   z-index: 1;
 }
 
-/* Было max-width: 140px; max-height: 220px */
 .services-two-images img:nth-child(3) {
-  width: 140px;
-  height: 220px;
-  object-fit: cover;
+  max-width: 140px;
+  max-height: 220px;
   bottom: 0;
   left: 290px;
   z-index: 2;
@@ -180,29 +172,24 @@
   position: absolute;
 }
 
-/* Было max-width: 300px; min-height: 400px */
 .services-three-images img:nth-child(1) {
-  width: 300px;
-  height: 400px;
+  max-width: 300px;
+  min-height: 400px;
   object-fit: cover;
   top: 0;
 }
 
-/* Было min-width: 360px; max-height: 360px */
 .services-three-images img:nth-child(2) {
-  width: 360px;
-  height: 360px;
-  object-fit: cover;
+  min-width: 360px;
+  max-height: 360px;
   top: 100px;
   right: 0;
   z-index: 1;
 }
 
-/* Было max-width: 180px; max-height: 220px */
 .services-three-images img:nth-child(3) {
-  width: 180px;
-  height: 220px;
-  object-fit: cover;
+  max-width: 180px;
+  max-height: 220px;
   bottom: 0;
   left: 100px;
   z-index: 2;
@@ -237,7 +224,7 @@
 /*   Media Queries      */
 /* -------------------- */
 
-/* Десктоп <=1024px */
+/* Планшеты <=1024px */
 @media (max-width: 1024px) {
   #services,
   #services-us {
@@ -271,42 +258,32 @@
 
   /* Первый блок */
   .services-images img:nth-child(1) {
-    width: 360px;       /* вместо max-width */
-    height: 440px;      /* вместо min-height */
-    object-fit: cover;
+    max-width: 360px;
+    min-height: 440px;
   }
-
   .services-images img:nth-child(2) {
     top: 120px;
     left: 65px;
-    /* width/height уже прописаны выше, 
-       можно добавить при желании разные для @media */
   }
 
   /* Второй блок */
   .services-two-images img:nth-child(2) {
-    width: 290px;       /* вместо max-width */
-    height: 348px;      /* вместо min-height */
-    object-fit: cover;
+    max-width: 290px;
+    min-height: 348px;
     top: 100px;
   }
-
   .services-two-images img:nth-child(3) {
     left: 220px;
-    /* width/height уже прописаны выше */
   }
 
   /* Третий блок */
   .services-three-images img:nth-child(1) {
-    width: 260px;       /* вместо max-width */
-    height: 350px;      /* вместо min-height */
-    object-fit: cover;
+    max-width: 260px;
+    min-height: 350px;
   }
-
   .services-three-images img:nth-child(2) {
-    width: 240px;       /* вместо min-width */
-    height: 300px;      /* вместо max-height */
-    object-fit: cover;
+    min-width: 240px;
+    max-height: 300px;
     top: 140px;
   }
 
@@ -339,12 +316,10 @@
     order: 2;
     max-width: 100%;
   }
-
   .services-text .text-item1 {
     font-size: 15px;
     padding-bottom: 16px;
   }
-
   .services-text .text-item2 {
     font-size: 15px;
     padding-bottom: 20px;
@@ -363,7 +338,7 @@
     gap: 0;
   }
 
-  /* Блоки со скроллом по горизонтали */
+  /* Горизонтальный скролл для блоков с картинками */
   .services-images {
     position: relative;
     display: flex;
@@ -373,39 +348,28 @@
     width: 100%;
     object-fit: cover;
   }
-
   .services-images img {
     position: static;
     width: 330px;
-    height: 300px;    /* жесткая высота */
+    height: 300px;
+    min-width: 330px;
+    min-height: 300px;
     flex-shrink: 0;
     object-fit: cover;
   }
-
   .services-images::-webkit-scrollbar {
     display: none;
   }
 
+  /* Порядок для первого блока */
   .services-images img:nth-child(1) {
     order: 1;
-    content: url("../assets/images/services/services-image1.png");
   }
-
   .services-images img:nth-child(2) {
     order: 3;
-    content: url("../assets/images/services/services-image-mobile2.png");
   }
-
   .services-images img:nth-child(3) {
     order: 2;
-  }
-
-  .services-images img:nth-child(1),
-  .services-images img:nth-child(2),
-  .services-images img:nth-child(3) {
-    padding: 0;
-    position: static;
-    object-fit: cover;
   }
 
   .price-label,
@@ -413,7 +377,6 @@
   .price-three-label {
     display: none;
   }
-
   .price-label-en,
   .price-two-label-en,
   .price-three-label-en {
@@ -441,29 +404,27 @@
     gap: 16px;
     overflow-x: auto;
   }
-
   .services-two-images img {
     position: static;
     width: 330px;
     height: 300px;
+    min-width: 330px;
+    min-height: 300px;
     flex-shrink: 0;
-    object-fit: cover; 
+    object-fit: cover;
   }
-
   .services-two-images::-webkit-scrollbar {
     display: none;
   }
 
   .services-two-images img:nth-child(1) {
     order: 1;
-    content: url("../assets/images/services/services-image-mobile4.png");
   }
   .services-two-images img:nth-child(2) {
     order: 3;
   }
   .services-two-images img:nth-child(3) {
     order: 2;
-    content: url("../assets/images/services/services-image-mobile5.png");
   }
 
   /* Третий блок услуг */
@@ -476,29 +437,26 @@
     overflow-x: auto;
     order: 1;
   }
-
   .services-three-images img {
     position: static;
     width: 330px;
     height: 300px;
+    min-width: 330px;
+    min-height: 300px;
     flex-shrink: 0;
     object-fit: cover;
   }
-
   .services-three-images::-webkit-scrollbar {
     display: none;
   }
 
   .services-three-images img:nth-child(1) {
     order: 2;
-    content: url("../assets/images/services/services-image-mobile8.png");
   }
   .services-three-images img:nth-child(2) {
     order: 1;
-    content: url("../assets/images/services/services-image-mobile7.png");
   }
   .services-three-images img:nth-child(3) {
     order: 3;
-    content: url("../assets/images/services/services-image-mobile9.png");
   }
 }

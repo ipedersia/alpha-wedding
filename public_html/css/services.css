@@ -51,14 +51,15 @@
 }
 
 .services-images img {
-  position: absolute;
+  position: absolute; /* для десктопа */
+  object-fit: cover;
+  display: block;
 }
 
 /* Главное фото (справа вверху) */
 .services-images img:nth-child(1) {
-  max-width: 363px;
-  min-height: 442px;
-  object-fit: cover;
+  width: 363px;
+  height: 442px;
   top: 0;
   right: 0;
 }
@@ -83,8 +84,8 @@
 
 /* Второе фото (слева, в середине) */
 .services-images img:nth-child(2) {
-  max-width: 200px;
-  max-height: 260px;
+  width: 200px;
+  height: 260px;
   top: 100px;
   left: 50px;
   z-index: 1;
@@ -92,8 +93,8 @@
 
 /* Третье фото (снизу слева) */
 .services-images img:nth-child(3) {
-  min-width: 280px;
-  max-height: 220px;
+  width: 280px;
+  height: 220px;
   bottom: 0;
   left: 0;
 }
@@ -113,27 +114,28 @@
 }
 
 .services-two-images img {
-  position: absolute;
+  position: absolute; /* для десктопа */
+  object-fit: cover;
+  display: block;
 }
 
 .services-two-images img:nth-child(1) {
-  max-width: 320px;
-  max-height: 240px;
+  width: 320px;
+  height: 240px;
   top: 0;
   right: 0;
 }
 
 .services-two-images img:nth-child(2) {
-  max-width: 360px;
-  min-height: 400px;
-  object-fit: cover;
+  width: 360px;
+  height: 400px;
   top: 100px;
   z-index: 1;
 }
 
 .services-two-images img:nth-child(3) {
-  max-width: 140px;
-  max-height: 220px;
+  width: 140px;
+  height: 220px;
   bottom: 0;
   left: 290px;
   z-index: 2;
@@ -169,27 +171,31 @@
 }
 
 .services-three-images img {
-  position: absolute;
+  position: absolute; /* для десктопа */
+  object-fit: cover;
+  display: block;
 }
 
+/* Первое фото (сверху слева) */
 .services-three-images img:nth-child(1) {
-  max-width: 300px;
-  min-height: 400px;
-  object-fit: cover;
+  width: 300px;
+  height: 400px;
   top: 0;
 }
 
+/* Второе фото (справа, выше) */
 .services-three-images img:nth-child(2) {
-  min-width: 360px;
-  max-height: 360px;
+  width: 360px;
+  height: 360px;
   top: 100px;
   right: 0;
   z-index: 1;
 }
 
+/* Третье фото (снизу слева) */
 .services-three-images img:nth-child(3) {
-  max-width: 180px;
-  max-height: 220px;
+  width: 180px;
+  height: 220px;
   bottom: 0;
   left: 100px;
   z-index: 2;
@@ -258,8 +264,8 @@
 
   /* Первый блок */
   .services-images img:nth-child(1) {
-    max-width: 360px;
-    min-height: 440px;
+    width: 360px;
+    height: 440px;
   }
   .services-images img:nth-child(2) {
     top: 120px;
@@ -268,8 +274,8 @@
 
   /* Второй блок */
   .services-two-images img:nth-child(2) {
-    max-width: 290px;
-    min-height: 348px;
+    width: 290px;
+    height: 348px;
     top: 100px;
   }
   .services-two-images img:nth-child(3) {
@@ -278,12 +284,12 @@
 
   /* Третий блок */
   .services-three-images img:nth-child(1) {
-    max-width: 260px;
-    min-height: 350px;
+    width: 260px;
+    height: 350px;
   }
   .services-three-images img:nth-child(2) {
-    min-width: 240px;
-    max-height: 300px;
+    width: 240px;
+    height: 300px;
     top: 140px;
   }
 
@@ -338,45 +344,10 @@
     gap: 0;
   }
 
-  /* Горизонтальный скролл для блоков с картинками */
-  .services-images {
-    position: relative;
-    display: flex;
-    height: auto;
-    gap: 16px;
-    overflow-x: auto;
-    width: 100%;
-    object-fit: cover;
-  }
-  .services-images img {
-    position: static;
-    width: 330px;
-    height: 300px;
-    min-width: 330px;
-    min-height: 300px;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .services-images::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Порядок для первого блока */
-  .services-images img:nth-child(1) {
-    order: 1;
-  }
-  .services-images img:nth-child(2) {
-    order: 3;
-  }
-  .services-images img:nth-child(3) {
-    order: 2;
-  }
-
+  /* Прячем большие ценники */
   .price-label,
   .price-two-label,
-  .price-three-label {
-    display: none;
-  }
+  .price-three-label,
   .price-label-en,
   .price-two-label-en,
   .price-three-label-en {
@@ -395,26 +366,45 @@
     margin-bottom: 20px;
   }
 
-  /* Второй блок услуг */
-  .services-two-images {
+  /* Горизонтальный скролл + переопределение размеров и позиции для всех изображений */
+  .services-images,
+  .services-two-images,
+  .services-three-images {
     position: relative;
     display: flex;
-    width: auto;
+    width: 100%;
     height: auto;
     gap: 16px;
     overflow-x: auto;
   }
-  .services-two-images img {
-    position: static;
-    width: 330px;
-    height: 300px;
-    min-width: 330px;
-    min-height: 300px;
+  .services-images::-webkit-scrollbar,
+  .services-two-images::-webkit-scrollbar,
+  .services-three-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-images img,
+  .services-two-images img,
+  .services-three-images img {
+    position: static !important;
+    width: 330px !important;
+    height: 300px !important;
+    top: auto !important;
+    left: auto !important;
     flex-shrink: 0;
     object-fit: cover;
+    display: block;
   }
-  .services-two-images::-webkit-scrollbar {
-    display: none;
+
+  /* Меняем порядок, если нужно */
+  .services-images img:nth-child(1) {
+    order: 1;
+  }
+  .services-images img:nth-child(2) {
+    order: 3;
+  }
+  .services-images img:nth-child(3) {
+    order: 2;
   }
 
   .services-two-images img:nth-child(1) {
@@ -425,29 +415,6 @@
   }
   .services-two-images img:nth-child(3) {
     order: 2;
-  }
-
-  /* Третий блок услуг */
-  .services-three-images {
-    position: relative;
-    display: flex;
-    width: auto;
-    height: auto;
-    gap: 16px;
-    overflow-x: auto;
-    order: 1;
-  }
-  .services-three-images img {
-    position: static;
-    width: 330px;
-    height: 300px;
-    min-width: 330px;
-    min-height: 300px;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .services-three-images::-webkit-scrollbar {
-    display: none;
   }
 
   .services-three-images img:nth-child(1) {

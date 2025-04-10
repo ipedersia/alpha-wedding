@@ -376,14 +376,44 @@
   }
 }
 
-/* Дополнительный медиа-запрос для очень маленьких экранов */
-@media (max-width: 360px) {
-  .header-desktop {
-    display: block;
-    font-size: 28px;
-    text-align: center;
+  /* Меняем порядок, если нужно */
+  .venues-images img:nth-child(1) {
+    order: 2;
   }
-  .header-mob {
-    display: none;
+  .venues-images img:nth-child(2) {
+    order: 1;
   }
-}
+  .venues-images img:nth-child(3) {
+    order: 3;
+  }
+
+  .venues-images-item2 img:nth-child(1) {
+    order: 2;
+  }
+  .venues-images-item2 img:nth-child(2) {
+    order: 1;
+  }
+
+  .venues-images-item3 img:nth-child(1) {
+    order: 2;
+  }
+  .venues-images-item3 img:nth-child(2) {
+    order: 1;
+  }
+  .venues-images-item3img:nth-child(3) {
+    order: 3;
+  }
+
+  .venues-images-item4 img:nth-child(1) {
+    order: 2;
+  }
+  .venues-images-item4 img:nth-child(2) {
+    order: 1;
+  }
+
+  .venues-images-item5 img:nth-child(1) {
+    order: 1;
+  }
+  .venues-images-item5 img:nth-child(2) {
+    order: 3;
+  }

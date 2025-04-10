@@ -398,10 +398,10 @@
 
   /* Меняем порядок, если нужно */
   .services-images img:nth-child(1) {
-    order: 1;
+    order: 3;
   }
   .services-images img:nth-child(2) {
-    order: 3;
+    order: 1;
   }
   .services-images img:nth-child(3) {
     order: 2;
@@ -418,12 +418,12 @@
   }
 
   .services-three-images img:nth-child(1) {
-    order: 2;
-  }
-  .services-three-images img:nth-child(2) {
     order: 1;
   }
-  .services-three-images img:nth-child(3) {
+  .services-three-images img:nth-child(2) {
     order: 3;
+  }
+  .services-three-images img:nth-child(3) {
+    order: 2;
   }
 }

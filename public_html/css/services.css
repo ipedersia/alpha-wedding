@@ -377,6 +377,7 @@
     gap: 16px;
     overflow-x: auto;
   }
+  
   .services-images::-webkit-scrollbar,
   .services-two-images::-webkit-scrollbar,
   .services-three-images::-webkit-scrollbar {

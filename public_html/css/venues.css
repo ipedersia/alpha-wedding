@@ -338,7 +338,7 @@
     font-size: 15px;
   }
 
-  /* Приводим блоки изображений к слайдеру */
+  /* Горизонтальный скролл + переопределение размеров и позиции для всех изображений */
   .venues-images,
   .venues-images-item2,
   .venues-images-item3,
@@ -350,9 +350,8 @@
     height: auto;
     gap: 16px;
     overflow-x: auto;
-    /* max-width: 100%;
-    margin: 0 auto; */
   }
+
   .venues-images::-webkit-scrollbar,
   .venues-images-item2::-webkit-scrollbar,
   .venues-images-item3::-webkit-scrollbar,
@@ -360,6 +359,7 @@
   .venues-images-item5::-webkit-scrollbar {
     display: none;
   }
+
   .venues-images img,
   .venues-images-item2 img,
   .venues-images-item3 img,
@@ -374,7 +374,7 @@
     object-fit: cover;
     display: block;
   }
-}
+
 
   /* Меняем порядок, если нужно */
   .venues-images img:nth-child(1) {
@@ -417,3 +417,5 @@
   .venues-images-item5 img:nth-child(2) {
     order: 3;
   }
+
+}

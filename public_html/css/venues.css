@@ -346,10 +346,12 @@
   .venues-images-item5 {
     position: relative;
     display: flex;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     gap: 16px;
     overflow-x: auto;
+    margin: 0 auto;
   }
 
   .venues-images::-webkit-scrollbar,
@@ -374,6 +376,12 @@
     object-fit: cover;
     display: block;
   }
+
+  .venues-images img:nth-child(1), .venues-images img:nth-child(2), .venues-images img:nth-child(3) {
+    padding: 0;
+    position: static;
+    object-fit: cover;
+}
 
 
   /* Меняем порядок, если нужно */

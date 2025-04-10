@@ -220,7 +220,7 @@
 }
 
 #services,
-#services-us {
+#services-en {
   position: relative;
   padding-top: 100px;
   margin-top: -100px;
@@ -233,7 +233,7 @@
 /* Планшеты <=1024px */
 @media (max-width: 1024px) {
   #services,
-  #services-us {
+  #services-en {
     position: relative;
     padding-top: 72px;
     margin-top: -72px;
@@ -301,10 +301,10 @@
   }
 }
 
-/* Мобильные <=938px */
+/* Мобильная версия <=938px - слайдер и фиксированные размеры изображений 330×300 */
 @media (max-width: 938px) {
   #services,
-  #services-us {
+  #services-en {
     position: relative;
     padding-top: 72px;
     margin-top: -72px;

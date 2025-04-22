@@ -7,16 +7,11 @@
 
     <div class="reviews-slider">
       <div class="review-slide active">
-        <picture class="review-img">
-          <source
-            srcset="/assets/images/reviews/reviews-image1.png"
-            media="(min-width: 1440px)"
-          />
-          <img
-            src="/assets/images/reviews/mob1.png"
-            alt="Описание изображения"
-          />
-        </picture>
+        <img
+          class="review-img"
+          src="/assets/images/reviews/reviews-image1.jpg"
+          alt="Pamela and Mateusz"
+        />
         <div class="review-content">
           <p class="review-subtitle">Pamela and Mateusz</p>
           <p class="review-text">
@@ -31,18 +26,13 @@
           <p class="review-text3">Thanks again very much!</p>
         </div>
       </div>
-
+    
       <div class="review-slide">
-        <picture class="review-img">
-          <source
-            srcset="/assets/images/reviews/reviews-image3.png"
-            media="(min-width: 1440px)"
-          />
-          <img
-            src="/assets/images/reviews/mob2.png"
-            alt="Описание изображения"
-          />
-        </picture>
+        <img
+          class="review-img"
+          src="/assets/images/reviews/reviews-image2.jpg"
+          alt="Denis and Nadezhda"
+        />
         <div class="review-content">
           <p class="review-subtitle">Denis and Nadezhda</p>
           <p class="review-text">
@@ -60,16 +50,11 @@
       </div>
 
       <div class="review-slide">
-        <picture class="review-img">
-          <source
-            srcset="/assets/images/reviews/wedding-photo.png"
-            media="(min-width: 1440px)"
-          />
-          <img
-            src="/assets/images/reviews/mob3.png"
-            alt="Описание изображения"
-          />
-        </picture>
+        <img
+          class="review-img"
+          src="/assets/images/reviews/reviews-image3.jpg"
+          alt="Natalia and Pavel"
+        />
         <div class="review-content">
           <p class="review-subtitle">Natalia and Pavel</p>
           <p class="review-text">
@@ -88,24 +73,25 @@
     </div>
 
     <!-- Навигация для слайдера -->
+     
     <div class="slider-navigation">
-      <div class="slider-navigation">
-        <span class="nav-prev" onclick="moveSlide(-1)"
-          ><img
-            class="left-arrow"
-            src="/assets/icons/reviews/left-arrow.png"
-            alt=""
-        /></span>
-        <span class="nav-dot active" onclick="currentSlide(1)"></span>
-        <span class="nav-dot" onclick="currentSlide(2)"></span>
-        <span class="nav-dot" onclick="currentSlide(3)"></span>
-        <span class="nav-next" onclick="moveSlide(1)"
-          ><img
-            class="right-arrow"
-            src="/assets/icons/reviews/right-arrow.png"
-            alt=""
-        /></span>
-      </div>
+      <span class="nav-prev" onclick="moveSlide(-1)">
+        <img
+          class="left-arrow"
+          src="/assets/icons/reviews/left-arrow.png"
+          alt="назад"
+        />
+      </span>
+      <span class="nav-dot active" onclick="currentSlide(1)"></span>
+      <span class="nav-dot" onclick="currentSlide(2)"></span>
+      <span class="nav-dot" onclick="currentSlide(3)"></span>
+      <span class="nav-next" onclick="moveSlide(1)">
+        <img
+          class="right-arrow"
+          src="/assets/icons/reviews/right-arrow.png"
+          alt="вперёд"
+        />
+      </span>
     </div>
   </div>
 </div>

@@ -1,5 +1,4 @@
 /* Рекомендации */
-
 .recommendation-container {
   padding: 96px 48px 64px 48px;
 }
@@ -37,6 +36,14 @@
     padding: 0;
     gap: 20px;
   }
+
+  .content-image-block img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 @media (max-width: 940px) {
@@ -52,7 +59,7 @@
     font-size: 15px;
   }
 
-  .content-image-block {
+   .content-image-block {
     display: none;
   }
 }

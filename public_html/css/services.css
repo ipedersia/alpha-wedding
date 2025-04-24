@@ -270,6 +270,7 @@
   .services-images img:nth-child(2) {
     top: 120px;
     left: 65px;
+    object-position: center 10%;
   }
 
   /* Второй блок */
@@ -278,6 +279,7 @@
     height: 348px;
     top: 100px;
   }
+
   .services-two-images img:nth-child(3) {
     left: 220px;
   }
@@ -291,6 +293,7 @@
     width: 240px;
     height: 300px;
     top: 140px;
+    object-position: center 30%;
   }
 
   .price-three-label {

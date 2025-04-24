@@ -105,4 +105,9 @@
   .footer-content p {
     font-size: 15px;
   }
+
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 40px;
+  }
 }
